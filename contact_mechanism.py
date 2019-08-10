@@ -1,14 +1,18 @@
 # This file is part of Tryton.  The COPYRIGHT file at the top level of
 # this repository contains the full copyright notices and license terms.
+from itertools import chain
 try:
     import phonenumbers
     from phonenumbers import PhoneNumberFormat, NumberParseException
 except ImportError:
     phonenumbers = None
 
+from trytond.i18n import gettext
 from trytond.model import (
     ModelView, ModelSQL, DeactivableMixin, fields, sequence_ordered)
+from trytond.model.exceptions import AccessError
 from trytond.pyson import Eval
+from .exceptions import InvalidPhoneNumber
 
 __all__ = ['ContactMechanism']
 
@@ -84,22 +88,14 @@ class ContactMechanism(
         }, depends=['value', 'type', 'active']),
         'get_value', setter='set_value')
     url = fields.Function(fields.Char('URL', states={
-                'invisible': (~Eval('type').in_(['email', 'website', 'skype',
-                            'sip', 'fax', 'phone'])
-                    | ~Eval('url')),
-                }, depends=['type']),
-        'get_url')
+                'invisible': ~Eval('url'),
+                }),
+        'on_change_with_url')
 
     @classmethod
     def __setup__(cls):
         super(ContactMechanism, cls).__setup__()
         cls._order.insert(0, ('party', 'ASC'))
-        cls._error_messages.update({
-                'write_party': ('You can not modify the party of contact '
-                    'mechanism "%s".'),
-                'invalid_phonenumber': ('The phone number "%(phone)s" of '
-                    'party "%(party)s" is not valid .'),
-                })
 
     @staticmethod
     def default_type():
@@ -110,7 +106,8 @@ class ContactMechanism(
         return dict((name, dict((m.id, m.value) for m in mechanisms))
             for name in names)
 
-    def get_url(self, name=None, value=None):
+    @fields.depends('type', 'value')
+    def on_change_with_url(self, name=None, value=None):
         if value is None:
             value = self.value
         if self.type == 'email':
@@ -127,26 +124,37 @@ class ContactMechanism(
             return 'fax:%s' % value
         return None
 
-    @classmethod
-    def format_value(cls, value=None, type_=None):
-        if phonenumbers and type_ in _PHONE_TYPES:
+    @fields.depends('party', '_parent_party.addreses')
+    def _phone_country_codes(self):
+        if self.party:
+            for address in self.party.addresses:
+                if address.country:
+                    yield address.country.code
+
+    @fields.depends(methods=['_phone_country_codes'])
+    def _parse_phonenumber(self, value):
+        for country_code in chain(self._phone_country_codes(), [None]):
             try:
-                phonenumber = phonenumbers.parse(value)
+                # Country code is ignored if value has an international prefix
+                return phonenumbers.parse(value, country_code)
             except NumberParseException:
                 pass
-            else:
+        return None
+
+    @fields.depends(methods=['_parse_phonenumber'])
+    def format_value(self, value=None, type_=None):
+        if phonenumbers and type_ in _PHONE_TYPES:
+            phonenumber = self._parse_phonenumber(value)
+            if phonenumber:
                 value = phonenumbers.format_number(
                     phonenumber, PhoneNumberFormat.INTERNATIONAL)
         return value
 
-    @classmethod
-    def format_value_compact(cls, value=None, type_=None):
+    @fields.depends(methods=['_parse_phonenumber'])
+    def format_value_compact(self, value=None, type_=None):
         if phonenumbers and type_ in _PHONE_TYPES:
-            try:
-                phonenumber = phonenumbers.parse(value)
-            except NumberParseException:
-                pass
-            else:
+            phonenumber = self._parse_phonenumber(value)
+            if phonenumber:
                 value = phonenumbers.format_number(
                     phonenumber, PhoneNumberFormat.E164)
         return value
@@ -156,6 +164,8 @@ class ContactMechanism(
         #  Setting value is done by on_changes
         pass
 
+    @fields.depends(
+        methods=['on_change_with_url', 'format_value', 'format_value_compact'])
     def _change_value(self, value, type_):
         self.value = self.format_value(value=value, type_=type_)
         self.value_compact = self.format_value_compact(
@@ -165,33 +175,29 @@ class ContactMechanism(
         self.skype = value
         self.sip = value
         self.other_value = value
-        self.url = self.get_url(value=value)
+        self.url = self.on_change_with_url(value=value)
 
-    @fields.depends('value', 'type')
-    def on_change_type(self):
-        self.url = self.get_url(value=self.value)
-
-    @fields.depends('value', 'type')
+    @fields.depends('value', 'type', methods=['_change_value'])
     def on_change_value(self):
         return self._change_value(self.value, self.type)
 
-    @fields.depends('website', 'type')
+    @fields.depends('website', 'type', methods=['_change_value'])
     def on_change_website(self):
         return self._change_value(self.website, self.type)
 
-    @fields.depends('email', 'type')
+    @fields.depends('email', 'type', methods=['_change_value'])
     def on_change_email(self):
         return self._change_value(self.email, self.type)
 
-    @fields.depends('skype', 'type')
+    @fields.depends('skype', 'type', methods=['_change_value'])
     def on_change_skype(self):
         return self._change_value(self.skype, self.type)
 
-    @fields.depends('sip', 'type')
+    @fields.depends('sip', 'type', methods=['_change_value'])
     def on_change_sip(self):
         return self._change_value(self.sip, self.type)
 
-    @fields.depends('other_value', 'type')
+    @fields.depends('other_value', 'type', methods=['_change_value'])
     def on_change_other_value(self):
         return self._change_value(self.other_value, self.type)
 
@@ -230,8 +236,11 @@ class ContactMechanism(
             if 'party' in values:
                 for mechanism in mechanisms:
                     if mechanism.party.id != values['party']:
-                        cls.raise_user_error(
-                            'write_party', (mechanism.rec_name,))
+                        raise AccessError(
+                            gettext('party'
+                            '.msg_contact_mechanism_change_party') % {
+                                'contact': mechanism.rec_name,
+                                })
         super(ContactMechanism, cls).write(*args)
         cls._format_values(all_mechanisms)
 
@@ -244,16 +253,11 @@ class ContactMechanism(
     def check_valid_phonenumber(self):
         if not phonenumbers or self.type not in _PHONE_TYPES:
             return
-        try:
-            phonenumber = phonenumbers.parse(self.value)
-        except NumberParseException:
-            phonenumber = None
+        phonenumber = self._parse_phonenumber(self.value)
         if not (phonenumber and phonenumbers.is_valid_number(phonenumber)):
-            self.raise_user_error(
-                'invalid_phonenumber', {
-                    'phone': self.value,
-                    'party': self.party.rec_name
-                    })
+            raise InvalidPhoneNumber(
+                gettext('party.msg_invalid_phone_number',
+                    phone=self.value, party=self.party.rec_name))
 
     @classmethod
     def usages(cls, _fields=None):

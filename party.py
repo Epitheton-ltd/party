@@ -1,10 +1,11 @@
 # This file is part of Tryton.  The COPYRIGHT file at the top level of
 # this repository contains the full copyright notices and license terms.
-import stdnum.eu.vat as vat
+from stdnum import get_cc_module
 import stdnum.exceptions
 from sql import Null, Column, Literal
 from sql.functions import CharLength, Substring, Position
 
+from trytond.i18n import gettext
 from trytond.model import (ModelView, ModelSQL, MultiValueMixin, ValueMixin,
     DeactivableMixin, fields, Unique, sequence_ordered)
 from trytond.wizard import Wizard, StateTransition, StateView, Button
@@ -13,13 +14,15 @@ from trytond.transaction import Transaction
 from trytond.pool import Pool
 from trytond import backend
 from trytond.tools.multivalue import migrate_property
+from trytond.tools import lstrip_wildcard
+from .exceptions import (
+    InvalidIdentifierCode, VIESUnavailable, SimilarityWarning, EraseError)
 
 __all__ = ['Party', 'PartyLang', 'PartyCategory', 'PartyIdentifier',
     'CheckVIESResult', 'CheckVIES',
     'PartyReplace', 'PartyReplaceAsk',
     'PartyErase', 'PartyEraseAsk']
 
-VAT_COUNTRIES = [('', '')]
 STATES = {
     'readonly': ~Eval('active', True),
 }
@@ -76,9 +79,8 @@ class Party(DeactivableMixin, ModelSQL, ModelView, MultiValueMixin):
         super(Party, cls).__setup__()
         t = cls.__table__()
         cls._sql_constraints = [
-            ('code_uniq', Unique(t, t.code),
-             'The code of the party must be unique.')
-        ]
+            ('code_uniq', Unique(t, t.code), 'party.msg_party_code_unique')
+            ]
         cls._order.insert(0, ('name', 'ASC'))
         cls.active.states.update({
                 'readonly': Bool(Eval('replaced_by')),
@@ -126,11 +128,19 @@ class Party(DeactivableMixin, ModelSQL, ModelView, MultiValueMixin):
         return True
 
     @classmethod
-    def _tax_identifier_types(cls):
-        return ['eu_vat']
+    def tax_identifier_types(cls):
+        return ['al_nipt', 'ar_cuit', 'be_vat', 'bg_vat', 'ch_vat', 'cl_rut',
+            'co_rut', 'cu_vat', 'cz_dic', 'de_vat', 'do_rnc', 'dk_cvr',
+            'ec_ruc', 'ee_kmkr', 'es_cif', 'es_nie', 'es_nif', 'eu_vat',
+            'fi_alv', 'fr_tva', 'gb_vat', 'gr_vat', 'hu_anum', 'ie_vat',
+            'is_vsk', 'it_iva', 'lt_pvm', 'lu_tva', 'lv_pvn', 'mc_tva',
+            'mt_vat', 'mx_rfc', 'nl_btw', 'no_mva', 'pl_nip', 'pt_nif',
+            'ro_cf', 'rs_pib', 'ru_inn', 'se_vat', 'si_ddv', 'sk_dph',
+            'sm_coe', 'us_atin', 'us_ein', 'us_itin', 'us_ptin', 'us_ssn',
+            'us_tin']
 
     def get_tax_identifier(self, name):
-        types = self._tax_identifier_types()
+        types = self.tax_identifier_types()
         for identifier in self.identifiers:
             if identifier.type in types:
                 return identifier.id
@@ -138,7 +148,7 @@ class Party(DeactivableMixin, ModelSQL, ModelView, MultiValueMixin):
     @classmethod
     def search_tax_identifier(cls, name, clause):
         _, operator, value = clause
-        types = cls._tax_identifier_types()
+        types = cls.tax_identifier_types()
         domain = [
             ('identifiers', 'where', [
                     ('code', operator, value),
@@ -211,9 +221,12 @@ class Party(DeactivableMixin, ModelSQL, ModelView, MultiValueMixin):
             bool_op = 'AND'
         else:
             bool_op = 'OR'
+        code_value = clause[2]
+        if clause[1].endswith('like'):
+            code_value = lstrip_wildcard(clause[2])
         return [bool_op,
-            ('code',) + tuple(clause[1:]),
-            ('identifiers.code',) + tuple(clause[1:]),
+            ('code', clause[1], code_value) + tuple(clause[3:]),
+            ('identifiers.code', clause[1], code_value) + tuple(clause[3:]),
             ('name',) + tuple(clause[1:]),
             ('contact_mechanisms.rec_name',) + tuple(clause[1:]),
             ]
@@ -312,18 +325,115 @@ class PartyIdentifier(sequence_ordered(), ModelSQL, ModelView):
         help="The party identified by this record.")
     type = fields.Selection([
             (None, ''),
-            ('eu_vat', 'VAT'),
+            ('al_nipt', "Albanian VAT Number"),
+            ('ar_cuit', "Argentinian Tax Number"),
+            ('at_businessid', "Austrian Company Register"),
+            ('at_tin', "Austrian Tax Identification"),
+            ('au_abn', "Australian Business Number"),
+            ('au_acn', "Australian Company Number"),
+            ('au_tfn', "Australian Tax File Number"),
+            ('be_vat', "Belgian Enterprise Number"),
+            ('bg_egn', "Bulgarian Personal Identity Codes"),
+            ('bg_pnf', "Bulgarian Number of a Foreigner"),
+            ('bg_vat', "Bulgarian VAT Number"),
+            ('br_cnpj', "Brazillian Company Identifier"),
+            ('br_cpf', "Brazillian National Identifier"),
+            ('ca_bn', "Canadian Business Number"),
+            ('ca_sin', "Canadian Social Insurance Number"),
+            ('ch_ssn', "Swiss Social Security Number"),
+            ('ch_uid', "Swiss Business Identifier"),
+            ('ch_vat', "Swiss VAT Number"),
+            ('cl_rut', "Chilean National Tax Number"),
+            ('cn_rit', "Chinese Resident Identity Card Number"),
+            ('co_nit', "Colombian Identity Code"),
+            ('co_rut', "Colombian Business Tax Number"),
+            ('cy_vat', "Cypriot VAT Number"),
+            ('cz_dic', "Czech VAT Number"),
+            ('cz_rc', "Czech National Identifier"),
+            ('de_handelsregisternummer', "German Company Register Number"),
+            ('de_idnr', "German Personal Tax Number"),
+            ('de_stnr', "German Tax Number"),
+            ('de_vat', "German VAT Number"),
+            ('dk_cpr', "Danish Citizen Number"),
+            ('dk_cvr', "Danish VAT Number"),
+            ('do_cedula', "Dominican Republic National Identification Number"),
+            ('do_rnc', "Dominican Republic Tax"),
+            ('ec_ci', "Ecuadorian Personal Identity Code"),
+            ('ec_ruc', "Ecuadorian Tax Identification"),
+            ('ee_ik', "Estonian Personcal ID number"),
+            ('ee_kmkr', "Estonian VAT Number"),
+            ('ee_registrikood', "Estonian Organisation Registration Code"),
+            ('es_cif', "Spanish Company Tax"),
+            ('es_dni', "Spanish Personal Identity Codes"),
+            ('es_nie', "Spanish Foreigner Number"),
+            ('es_nif', "Spanish VAT Number"),
+            ('eu_at_02', "SEPA Identifier of the Creditor (AT-02)"),
+            ('eu_vat', "European VAT Number"),
+            ('fi_alv', "Finnish VAT Number"),
+            ('fi_associationid', "Finnish Association Identifier"),
+            ('fi_hetu', "Finnish Personal Identity Code"),
+            ('fi_veronumero', "Finnish individual tax number"),
+            ('fi_ytunnus', "Finnish Business Identifier"),
+            ('fr_nif', "French Tax Identification Number"),
+            ('fr_nir', "French Personal Identification Number"),
+            # TODO: remove from party_siren
+            # ('fr_siren', "French Company Identification Number"),
+            ('fr_tva', "French VAT Number"),
+            ('gb_nhs',
+                "United Kingdom National Health Service Patient Identifier"),
+            ('gb_upn', "English Unique Pupil Number"),
+            ('gb_vat', "United Kingdom (and Isle of Man) VAT Number"),
+            ('gr_vat', "Greek VAT Number"),
+            ('hr_oib', "Croatian Identification Number"),
+            ('hu_anum', "Hungarian VAT Number"),
+            ('ie_pps', "Irish Personal Number"),
+            ('ie_vat', "Irish VAT Number"),
+            ('in_aadhaar', "Indian Digital Resident Personal Identity Number"),
+            ('in_pan', "Indian Income Tax Identifier"),
+            ('is_kennitala',
+                "Icelandic Personal and Organisation Identity Code"),
+            ('is_vsk', "Icelandic VAT Number"),
+            ('it_codicefiscale', "Italian Tax Code for Individuals"),
+            ('it_iva', "Italian VAT Number"),
+            ('lt_pvm', "Lithuanian VAT Number"),
+            ('lu_tva', "Luxembourgian VAT Number"),
+            ('lv_pvn', "Latvian VAT Number"),
+            ('mc_tva', "Monacan VAT Number"),
+            ('mt_vat', "Maltese VAT Number"),
+            ('mu_nid', "Mauritian National Identifier"),
+            ('mx_rfc', "Mexican Tax Number"),
+            ('my_nric',
+                "Malaysian National Registration Identity Card Number"),
+            ('nl_brin', "Dutch School Identification Number"),
+            ('nl_bsn', "Dutch Citizen Identification Number"),
+            ('nl_btw', "Dutch VAT Number"),
+            ('nl_onderwijsnummer', "Dutch student identification number"),
+            ('no_mva', "Norwegian VAT Number"),
+            ('no_orgnr', "Norwegian Organisation Number"),
+            ('pl_nip', "Polish VAT Number"),
+            ('pl_pesel', "Polish National Identification Number"),
+            ('pl_regon', "Polish Register of Economic Units"),
+            ('pt_nif', "Portuguese VAT Number"),
+            ('ro_cf', "Romanian VAT Number"),
+            ('ro_cnp', "Romanian Numerical Personal Code"),
+            ('rs_pib', "Serbian Tax Identification"),
+            ('ru_inn', "Russian Tax identifier"),
+            ('se_orgnr', "Swedish Company Number"),
+            ('se_vat', "Swedish VAT Number"),
+            ('si_ddv', "Slovenian VAT Number"),
+            ('sk_dph', "Slovak VAT Number"),
+            ('sk_rc', "Slovak Birth Number"),
+            ('sm_coe', "San Marino National Tax Number"),
+            ('tr_tckimlik', "Turkish Personal Identification Number"),
+            ('us_atin', "U.S. Adoption Taxpayer Identification Number"),
+            ('us_ein', "U.S. Employer Identification Number"),
+            ('us_itin', "U.S. Individual Taxpayer Identification Number"),
+            ('us_ptin', "U.S. Preparer Tax Identification Number"),
+            ('us_ssn', "U.S. Social Security Number"),
+            ('us_tin', "U.S. Taxpayer Identification Number"),
             ], 'Type')
     type_string = type.translated('type')
     code = fields.Char('Code', required=True)
-
-    @classmethod
-    def __setup__(cls):
-        super(PartyIdentifier, cls).__setup__()
-        cls._error_messages.update({
-                'invalid_vat': ('Invalid VAT number "%(code)s" '
-                    'on party "%(party)s".'),
-                })
 
     @classmethod
     def __register__(cls, module_name):
@@ -346,9 +456,12 @@ class PartyIdentifier(sequence_ordered(), ModelSQL, ModelView):
                 code = (country or '') + (number or '')
                 if not code:
                     continue
-                type = None
-                if vat.is_valid(code):
-                    type = 'eu_vat'
+                for type in Party.tax_identifier_types():
+                    module = get_cc_module(*type.split('_', 1))
+                    if module.is_valid(code):
+                        break
+                else:
+                    type = None
                 identifiers.append(
                     cls(party=party_id, code=code, type=type))
             cls.save(identifiers)
@@ -357,11 +470,13 @@ class PartyIdentifier(sequence_ordered(), ModelSQL, ModelView):
 
     @fields.depends('type', 'code')
     def on_change_with_code(self):
-        if self.type == 'eu_vat':
-            try:
-                return vat.compact(self.code)
-            except stdnum.exceptions.ValidationError:
-                pass
+        if self.type and '_' in self.type:
+            module = get_cc_module(*self.type.split('_', 1))
+            if module:
+                try:
+                    return module.compact(self.code)
+                except stdnum.exceptions.ValidationError:
+                    pass
         return self.code
 
     def pre_validate(self):
@@ -370,16 +485,19 @@ class PartyIdentifier(sequence_ordered(), ModelSQL, ModelView):
 
     @fields.depends('type', 'party', 'code')
     def check_code(self):
-        if self.type == 'eu_vat':
-            if not vat.is_valid(self.code):
-                if self.party and self.party.id > 0:
-                    party = self.party.rec_name
-                else:
-                    party = ''
-                self.raise_user_error('invalid_vat', {
-                        'code': self.code,
-                        'party': party,
-                        })
+        if self.type and '_' in self.type:
+            module = get_cc_module(*self.type.split('_', 1))
+            if module:
+                if not module.is_valid(self.code):
+                    if self.party and self.party.id > 0:
+                        party = self.party.rec_name
+                    else:
+                        party = ''
+                    raise InvalidIdentifierCode(
+                        gettext('party.msg_invalid_code',
+                            type=self.type_string,
+                            code=self.code,
+                            party=party))
 
 
 class CheckVIESResult(ModelView):
@@ -406,14 +524,6 @@ class CheckVIES(Wizard):
             Button('OK', 'end', 'tryton-ok', True),
             ])
 
-    @classmethod
-    def __setup__(cls):
-        super(CheckVIES, cls).__setup__()
-        cls._error_messages.update({
-                'vies_unavailable': ('The VIES service is unavailable, '
-                    'try again later.'),
-                })
-
     def transition_check(self):
         Party = Pool().get('party.party')
 
@@ -424,8 +534,9 @@ class CheckVIES(Wizard):
             for identifier in party.identifiers:
                 if identifier.type != 'eu_vat':
                     continue
+                eu_vat = get_cc_module('eu', 'vat')
                 try:
-                    if not vat.check_vies(identifier.code):
+                    if not eu_vat.check_vies(identifier.code)['valid']:
                         parties_failed.append(party.id)
                     else:
                         parties_succeed.append(party.id)
@@ -439,7 +550,8 @@ class CheckVIES(Wizard):
                                 or e.faultstring.find('MS_UNAVAILABLE') \
                                 or e.faultstring.find('TIMEOUT') \
                                 or e.faultstring.find('SERVER_BUSY'):
-                            self.raise_user_error('vies_unavailable')
+                            raise VIESUnavailable(
+                                gettext('party.msg_vies_unavailable')) from e
                     raise
         self.result.parties_succeed = parties_succeed
         self.result.parties_failed = parties_failed
@@ -462,26 +574,19 @@ class PartyReplace(Wizard):
             ])
     replace = StateTransition()
 
-    @classmethod
-    def __setup__(cls):
-        super(PartyReplace, cls).__setup__()
-        cls._error_messages.update({
-                'different_name': ("Parties have different names: "
-                    "%(source_name)s vs %(destination_name)s."),
-                'different_tax_identifier': (
-                    "Parties have different Tax Identifier: "
-                    "%(source_code)s vs %(destination_code)s."),
-                })
-
     def check_similarity(self):
+        pool = Pool()
+        Warning = pool.get('res.user.warning')
         source = self.ask.source
         destination = self.ask.destination
         if source.name != destination.name:
             key = 'party.replace name %s %s' % (source.id, destination.id)
-            self.raise_user_warning(key, 'different_name', {
-                    'source_name': source.name,
-                    'destination_name': destination.name,
-                    })
+            if Warning.check(key):
+                raise SimilarityWarning(
+                    key,
+                    gettext('party.msg_different_name',
+                        source_name=source.name,
+                        destination_name=destination.name))
         source_code = (source.tax_identifier.code
             if source.tax_identifier else '')
         destination_code = (destination.tax_identifier.code
@@ -489,10 +594,12 @@ class PartyReplace(Wizard):
         if source_code != destination_code:
             key = 'party.replace tax_identifier %s %s' % (
                 source.id, destination.id)
-            self.raise_user_warning(key, 'different_tax_identifier', {
-                    'source_code': source_code,
-                    'destination_code': destination_code,
-                    })
+            if Warning.check(key):
+                raise SimilarityWarning(
+                    key,
+                    gettext('party.msg_different_tax_identifier',
+                        source_code=source_code,
+                        destination_code=destination_code))
 
     def transition_replace(self):
         pool = Pool()
@@ -582,15 +689,6 @@ class PartyErase(Wizard):
             ])
     erase = StateTransition()
 
-    @classmethod
-    def __setup__(cls):
-        super(PartyErase, cls).__setup__()
-        cls._error_messages.update({
-                'active_party': (
-                    'The party "%(party)s" can not be erased '
-                    'because he is still active.'),
-                })
-
     def transition_erase(self):
         pool = Pool()
         Party = pool.get('party.party')
@@ -662,9 +760,8 @@ class PartyErase(Wizard):
 
     def check_erase(self, party):
         if party.active:
-            self.raise_user_error('active_party', {
-                    'party': party.rec_name,
-                    })
+            raise EraseError(gettext('party.msg_erase_active_party',
+                    party=party.rec_name))
 
     def to_erase(self, party_id):
         pool = Pool()

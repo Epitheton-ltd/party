@@ -4,27 +4,27 @@ msgstr "Content-Type: text/plain; charset=utf-8\n"
 
 msgctxt "field:party.address,active:"
 msgid "Active"
-msgstr "Activo"
+msgstr "Aktiivne"
 
 msgctxt "field:party.address,city:"
 msgid "City"
-msgstr "Ciudad"
+msgstr "Linn"
 
 msgctxt "field:party.address,country:"
 msgid "Country"
-msgstr "País"
+msgstr "Riik"
 
 msgctxt "field:party.address,create_date:"
 msgid "Create Date"
-msgstr "Fecha de creación"
+msgstr "Loomise kuupäev"
 
 msgctxt "field:party.address,create_uid:"
 msgid "Create User"
-msgstr "Usuario de creación"
+msgstr "Looja"
 
 msgctxt "field:party.address,full_address:"
 msgid "Full Address"
-msgstr "Dirección completa"
+msgstr "Täis aadress"
 
 msgctxt "field:party.address,id:"
 msgid "ID"
@@ -32,63 +32,63 @@ msgstr "ID"
 
 msgctxt "field:party.address,name:"
 msgid "Building Name"
-msgstr "Nombre del edificio"
+msgstr "Hoone"
 
 msgctxt "field:party.address,party:"
 msgid "Party"
-msgstr "Tercero"
+msgstr "Osapool"
 
 msgctxt "field:party.address,party_name:"
 msgid "Party Name"
-msgstr "Nombre del tercero"
+msgstr "Osapoole nimi"
 
 msgctxt "field:party.address,rec_name:"
 msgid "Record Name"
-msgstr "Nombre del registro"
+msgstr "Kirje nimi"
 
 msgctxt "field:party.address,sequence:"
 msgid "Sequence"
-msgstr "Secuencia"
+msgstr "Järjestus"
 
 msgctxt "field:party.address,street:"
 msgid "Street"
-msgstr "Calle"
+msgstr "Tänav"
 
 msgctxt "field:party.address,subdivision:"
 msgid "Subdivision"
-msgstr "Subdivisión"
+msgstr "Alajaotus"
 
 msgctxt "field:party.address,write_date:"
 msgid "Write Date"
-msgstr "Fecha de modificación"
+msgstr "Muutmise kuupäev"
 
 msgctxt "field:party.address,write_uid:"
 msgid "Write User"
-msgstr "Usuario de modificación"
+msgstr "Muutja"
 
 msgctxt "field:party.address,zip:"
 msgid "Zip"
-msgstr "Código postal"
+msgstr "Postiindeks"
 
 msgctxt "field:party.address.format,active:"
 msgid "Active"
-msgstr "Activo"
+msgstr "Aktiivne"
 
 msgctxt "field:party.address.format,country:"
 msgid "Country"
-msgstr "País"
+msgstr "Riik"
 
 msgctxt "field:party.address.format,create_date:"
 msgid "Create Date"
-msgstr "Fecha de creación"
+msgstr "Loomise kuupäev"
 
 msgctxt "field:party.address.format,create_uid:"
 msgid "Create User"
-msgstr "Usuario de creación"
+msgstr "Looja"
 
 msgctxt "field:party.address.format,format_:"
 msgid "Format"
-msgstr "Formato"
+msgstr "Formaat"
 
 msgctxt "field:party.address.format,id:"
 msgid "ID"
@@ -96,35 +96,35 @@ msgstr "ID"
 
 msgctxt "field:party.address.format,language:"
 msgid "Language"
-msgstr "Idioma"
+msgstr "Keel"
 
 msgctxt "field:party.address.format,rec_name:"
 msgid "Record Name"
-msgstr "Nombre del registro"
+msgstr "Kirje nimi"
 
 msgctxt "field:party.address.format,write_date:"
 msgid "Write Date"
-msgstr "Fecha de modificación"
+msgstr "Muutmise kuupäev"
 
 msgctxt "field:party.address.format,write_uid:"
 msgid "Write User"
-msgstr "Usuario de modificación"
+msgstr "Muutja"
 
 msgctxt "field:party.category,active:"
 msgid "Active"
-msgstr "Activo"
+msgstr "Aktiivne"
 
 msgctxt "field:party.category,childs:"
 msgid "Children"
-msgstr "Hijos"
+msgstr "Alamjaotus"
 
 msgctxt "field:party.category,create_date:"
 msgid "Create Date"
-msgstr "Fecha de creación"
+msgstr "Loomise kuupäev"
 
 msgctxt "field:party.category,create_uid:"
 msgid "Create User"
-msgstr "Usuario de creación"
+msgstr "Looja"
 
 msgctxt "field:party.category,id:"
 msgid "ID"
@@ -132,23 +132,23 @@ msgstr "ID"
 
 msgctxt "field:party.category,name:"
 msgid "Name"
-msgstr "Nombre"
+msgstr "Nimi"
 
 msgctxt "field:party.category,parent:"
 msgid "Parent"
-msgstr "Padre"
+msgstr "Ülem"
 
 msgctxt "field:party.category,rec_name:"
 msgid "Record Name"
-msgstr "Nombre del registro"
+msgstr "Kirje nimi"
 
 msgctxt "field:party.category,write_date:"
 msgid "Write Date"
-msgstr "Fecha de modificación"
+msgstr "Muutmise kuupäev"
 
 msgctxt "field:party.category,write_uid:"
 msgid "Write User"
-msgstr "Usuario de modificación"
+msgstr "Muutja"
 
 msgctxt "field:party.check_vies.result,id:"
 msgid "ID"
@@ -156,19 +156,19 @@ msgstr "ID"
 
 msgctxt "field:party.check_vies.result,parties_failed:"
 msgid "Parties Failed"
-msgstr "Tercero erróneo"
+msgstr "Ebaõnnestunud osapooled"
 
 msgctxt "field:party.check_vies.result,parties_succeed:"
 msgid "Parties Succeed"
-msgstr "Terceros correctos"
+msgstr "Õnnestunud osapooled"
 
 msgctxt "field:party.configuration,create_date:"
 msgid "Create Date"
-msgstr "Fecha de creación"
+msgstr "Loomise kuupäev"
 
 msgctxt "field:party.configuration,create_uid:"
 msgid "Create User"
-msgstr "Usuario de creación"
+msgstr "Looja"
 
 msgctxt "field:party.configuration,id:"
 msgid "ID"
@@ -176,31 +176,31 @@ msgstr "ID"
 
 msgctxt "field:party.configuration,party_lang:"
 msgid "Party Language"
-msgstr "Idioma del tercero"
+msgstr "Osapoole keel"
 
 msgctxt "field:party.configuration,party_sequence:"
 msgid "Party Sequence"
-msgstr "Secuencia de tercero"
+msgstr "Osapoole jada"
 
 msgctxt "field:party.configuration,rec_name:"
 msgid "Record Name"
-msgstr "Nombre del registro"
+msgstr "Kirje nimi"
 
 msgctxt "field:party.configuration,write_date:"
 msgid "Write Date"
-msgstr "Fecha de modificación"
+msgstr "Muutmise kuupäev"
 
 msgctxt "field:party.configuration,write_uid:"
 msgid "Write User"
-msgstr "Usuario de modificación"
+msgstr "Muutja"
 
 msgctxt "field:party.configuration.party_lang,create_date:"
 msgid "Create Date"
-msgstr "Fecha de creación"
+msgstr "Loomise kuupäev"
 
 msgctxt "field:party.configuration.party_lang,create_uid:"
 msgid "Create User"
-msgstr "Usuario de creación"
+msgstr "Looja"
 
 msgctxt "field:party.configuration.party_lang,id:"
 msgid "ID"
@@ -208,27 +208,27 @@ msgstr "ID"
 
 msgctxt "field:party.configuration.party_lang,party_lang:"
 msgid "Party Language"
-msgstr "Idioma del tercero"
+msgstr "Osapoole keel"
 
 msgctxt "field:party.configuration.party_lang,rec_name:"
 msgid "Record Name"
-msgstr "Nombre del registro"
+msgstr "Kirje nimi"
 
 msgctxt "field:party.configuration.party_lang,write_date:"
 msgid "Write Date"
-msgstr "Fecha de modificación"
+msgstr "Muutmise kuupäev"
 
 msgctxt "field:party.configuration.party_lang,write_uid:"
 msgid "Write User"
-msgstr "Usuario de modificación"
+msgstr "Muutja"
 
 msgctxt "field:party.configuration.party_sequence,create_date:"
 msgid "Create Date"
-msgstr "Fecha de creación"
+msgstr "Loomise kuupäev"
 
 msgctxt "field:party.configuration.party_sequence,create_uid:"
 msgid "Create User"
-msgstr "Usuario de creación"
+msgstr "Looja"
 
 msgctxt "field:party.configuration.party_sequence,id:"
 msgid "ID"
@@ -236,39 +236,39 @@ msgstr "ID"
 
 msgctxt "field:party.configuration.party_sequence,party_sequence:"
 msgid "Party Sequence"
-msgstr "Secuencia de tercero"
+msgstr "Osapoole jada"
 
 msgctxt "field:party.configuration.party_sequence,rec_name:"
 msgid "Record Name"
-msgstr "Nombre del registro"
+msgstr "Kirje nimi"
 
 msgctxt "field:party.configuration.party_sequence,write_date:"
 msgid "Write Date"
-msgstr "Fecha de modificación"
+msgstr "Muutmise kuupäev"
 
 msgctxt "field:party.configuration.party_sequence,write_uid:"
 msgid "Write User"
-msgstr "Usuario de modificación"
+msgstr "Muutja"
 
 msgctxt "field:party.contact_mechanism,active:"
 msgid "Active"
-msgstr "Activo"
+msgstr "Aktiivne"
 
 msgctxt "field:party.contact_mechanism,comment:"
 msgid "Comment"
-msgstr "Comentario"
+msgstr "Kommentaar"
 
 msgctxt "field:party.contact_mechanism,create_date:"
 msgid "Create Date"
-msgstr "Fecha de creación"
+msgstr "Loomise kuupäev"
 
 msgctxt "field:party.contact_mechanism,create_uid:"
 msgid "Create User"
-msgstr "Usuario de creación"
+msgstr "Looja"
 
 msgctxt "field:party.contact_mechanism,email:"
 msgid "E-Mail"
-msgstr "Correo electrónico"
+msgstr "E-Kiri"
 
 msgctxt "field:party.contact_mechanism,id:"
 msgid "ID"
@@ -276,23 +276,23 @@ msgstr "ID"
 
 msgctxt "field:party.contact_mechanism,name:"
 msgid "Name"
-msgstr "Nombre"
+msgstr "Nimi"
 
 msgctxt "field:party.contact_mechanism,other_value:"
 msgid "Value"
-msgstr "Valor"
+msgstr "Väärtus"
 
 msgctxt "field:party.contact_mechanism,party:"
 msgid "Party"
-msgstr "Tercero"
+msgstr "Osapool"
 
 msgctxt "field:party.contact_mechanism,rec_name:"
 msgid "Record Name"
-msgstr "Nombre del registro"
+msgstr "Kirje nimi"
 
 msgctxt "field:party.contact_mechanism,sequence:"
 msgid "Sequence"
-msgstr "Secuencia"
+msgstr "Järjestus"
 
 msgctxt "field:party.contact_mechanism,sip:"
 msgid "SIP"
@@ -304,7 +304,7 @@ msgstr "Skype"
 
 msgctxt "field:party.contact_mechanism,type:"
 msgid "Type"
-msgstr "Tipo"
+msgstr "Tüüp"
 
 msgctxt "field:party.contact_mechanism,url:"
 msgid "URL"
@@ -312,23 +312,23 @@ msgstr "URL"
 
 msgctxt "field:party.contact_mechanism,value:"
 msgid "Value"
-msgstr "Valor"
+msgstr "Väärtus"
 
 msgctxt "field:party.contact_mechanism,value_compact:"
 msgid "Value Compact"
-msgstr "Valor compacto"
+msgstr ""
 
 msgctxt "field:party.contact_mechanism,website:"
 msgid "Website"
-msgstr "Sitio Web"
+msgstr "Koduleht"
 
 msgctxt "field:party.contact_mechanism,write_date:"
 msgid "Write Date"
-msgstr "Fecha de modificación"
+msgstr "Muutmise kuupäev"
 
 msgctxt "field:party.contact_mechanism,write_uid:"
 msgid "Write User"
-msgstr "Usuario de modificación"
+msgstr "Muutja"
 
 msgctxt "field:party.erase.ask,id:"
 msgid "ID"
@@ -336,19 +336,19 @@ msgstr "ID"
 
 msgctxt "field:party.erase.ask,party:"
 msgid "Party"
-msgstr "Tercero"
+msgstr "Osapool"
 
 msgctxt "field:party.identifier,code:"
 msgid "Code"
-msgstr "Código"
+msgstr "Kood"
 
 msgctxt "field:party.identifier,create_date:"
 msgid "Create Date"
-msgstr "Fecha de creación"
+msgstr "Loomise kuupäev"
 
 msgctxt "field:party.identifier,create_uid:"
 msgid "Create User"
-msgstr "Usuario de creación"
+msgstr "Looja"
 
 msgctxt "field:party.identifier,id:"
 msgid "ID"
@@ -356,71 +356,71 @@ msgstr "ID"
 
 msgctxt "field:party.identifier,party:"
 msgid "Party"
-msgstr "Tercero"
+msgstr "Osapool"
 
 msgctxt "field:party.identifier,rec_name:"
 msgid "Record Name"
-msgstr "Nombre del registro"
+msgstr "Kirje nimi"
 
 msgctxt "field:party.identifier,sequence:"
 msgid "Sequence"
-msgstr "Secuencia"
+msgstr "Järjestus"
 
 msgctxt "field:party.identifier,type:"
 msgid "Type"
-msgstr "Tipo"
+msgstr "Tüüp"
 
 msgctxt "field:party.identifier,write_date:"
 msgid "Write Date"
-msgstr "Fecha de modificación"
+msgstr "Muutmise kuupäev"
 
 msgctxt "field:party.identifier,write_uid:"
 msgid "Write User"
-msgstr "Usuario de modificación"
+msgstr "Muutja"
 
 msgctxt "field:party.party,active:"
 msgid "Active"
-msgstr "Activo"
+msgstr "Aktiivne"
 
 msgctxt "field:party.party,addresses:"
 msgid "Addresses"
-msgstr "Direcciones"
+msgstr "Aadressid"
 
 msgctxt "field:party.party,categories:"
 msgid "Categories"
-msgstr "Categorías"
+msgstr "Kategooriad"
 
 msgctxt "field:party.party,code:"
 msgid "Code"
-msgstr "Código"
+msgstr "Kood"
 
 msgctxt "field:party.party,code_readonly:"
 msgid "Code Readonly"
-msgstr "Código sólo lectura"
+msgstr ""
 
 msgctxt "field:party.party,contact_mechanisms:"
 msgid "Contact Mechanisms"
-msgstr "Métodos de contacto"
+msgstr "Kontakteerumisviis"
 
 msgctxt "field:party.party,create_date:"
 msgid "Create Date"
-msgstr "Fecha de creación"
+msgstr "Loomise kuupäev"
 
 msgctxt "field:party.party,create_uid:"
 msgid "Create User"
-msgstr "Usuario de creación"
+msgstr "Looja"
 
 msgctxt "field:party.party,email:"
 msgid "E-Mail"
-msgstr "Correo electrónico"
+msgstr "E-Kiri"
 
 msgctxt "field:party.party,fax:"
 msgid "Fax"
-msgstr "Fax"
+msgstr "Faks"
 
 msgctxt "field:party.party,full_name:"
 msgid "Full Name"
-msgstr "Nombre completo"
+msgstr "Täisnimi"
 
 msgctxt "field:party.party,id:"
 msgid "ID"
@@ -428,63 +428,63 @@ msgstr "ID"
 
 msgctxt "field:party.party,identifiers:"
 msgid "Identifiers"
-msgstr "Identificadores"
+msgstr "Identifikaatorid"
 
 msgctxt "field:party.party,lang:"
 msgid "Language"
-msgstr "Idioma"
+msgstr "Keel"
 
 msgctxt "field:party.party,langs:"
 msgid "Languages"
-msgstr "Idiomas"
+msgstr "Keeled"
 
 msgctxt "field:party.party,mobile:"
 msgid "Mobile"
-msgstr "Móvil"
+msgstr "Mobiil"
 
 msgctxt "field:party.party,name:"
 msgid "Name"
-msgstr "Nombre"
+msgstr "Nimi"
 
 msgctxt "field:party.party,phone:"
 msgid "Phone"
-msgstr "Teléfono"
+msgstr "Telefon"
 
 msgctxt "field:party.party,rec_name:"
 msgid "Record Name"
-msgstr "Nombre del registro"
+msgstr "Kirje nimi"
 
 msgctxt "field:party.party,replaced_by:"
 msgid "Replaced By"
-msgstr "Reemplazado por"
+msgstr "Asendatud"
 
 msgctxt "field:party.party,tax_identifier:"
 msgid "Tax Identifier"
-msgstr "Identificador fiscal"
+msgstr "Maksutunnus"
 
 msgctxt "field:party.party,website:"
 msgid "Website"
-msgstr "Sitio Web"
+msgstr "Koduleht"
 
 msgctxt "field:party.party,write_date:"
 msgid "Write Date"
-msgstr "Fecha de modificación"
+msgstr "Muutmise kuupäev"
 
 msgctxt "field:party.party,write_uid:"
 msgid "Write User"
-msgstr "Usuario de modificación"
+msgstr "Muutja"
 
 msgctxt "field:party.party-party.category,category:"
 msgid "Category"
-msgstr "Categoría"
+msgstr "Kategooria"
 
 msgctxt "field:party.party-party.category,create_date:"
 msgid "Create Date"
-msgstr "Fecha de creación"
+msgstr "Loomise kuupäev"
 
 msgctxt "field:party.party-party.category,create_uid:"
 msgid "Create User"
-msgstr "Usuario de creación"
+msgstr "Looja"
 
 msgctxt "field:party.party-party.category,id:"
 msgid "ID"
@@ -492,27 +492,27 @@ msgstr "ID"
 
 msgctxt "field:party.party-party.category,party:"
 msgid "Party"
-msgstr "Tercero"
+msgstr "Osapool"
 
 msgctxt "field:party.party-party.category,rec_name:"
 msgid "Record Name"
-msgstr "Nombre del registro"
+msgstr "Kirje nimi"
 
 msgctxt "field:party.party-party.category,write_date:"
 msgid "Write Date"
-msgstr "Fecha de modificación"
+msgstr "Muutmise kuupäev"
 
 msgctxt "field:party.party-party.category,write_uid:"
 msgid "Write User"
-msgstr "Usuario de modificación"
+msgstr "Muutja"
 
 msgctxt "field:party.party.lang,create_date:"
 msgid "Create Date"
-msgstr "Fecha de creación"
+msgstr "Loomise kuupäev"
 
 msgctxt "field:party.party.lang,create_uid:"
 msgid "Create User"
-msgstr "Usuario de creación"
+msgstr "Looja"
 
 msgctxt "field:party.party.lang,id:"
 msgid "ID"
@@ -520,27 +520,27 @@ msgstr "ID"
 
 msgctxt "field:party.party.lang,lang:"
 msgid "Language"
-msgstr "Idioma"
+msgstr "Keel"
 
 msgctxt "field:party.party.lang,party:"
 msgid "Party"
-msgstr "Tercero"
+msgstr "Osapool"
 
 msgctxt "field:party.party.lang,rec_name:"
 msgid "Record Name"
-msgstr "Nombre del registro"
+msgstr "Kirje nimi"
 
 msgctxt "field:party.party.lang,write_date:"
 msgid "Write Date"
-msgstr "Fecha de modificación"
+msgstr "Muutmise kuupäev"
 
 msgctxt "field:party.party.lang,write_uid:"
 msgid "Write User"
-msgstr "Usuario de modificación"
+msgstr "Muutja"
 
 msgctxt "field:party.replace.ask,destination:"
 msgid "Destination"
-msgstr "Destino"
+msgstr "Sihtkoht"
 
 msgctxt "field:party.replace.ask,id:"
 msgid "ID"
@@ -548,21 +548,19 @@ msgstr "ID"
 
 msgctxt "field:party.replace.ask,source:"
 msgid "Source"
-msgstr "Origen"
+msgstr "Lähtekoht"
 
 msgctxt "help:party.address,active:"
 msgid "Uncheck to exclude from future use."
-msgstr "Desmarcar para eliminar el uso del registro en el futuro."
+msgstr "Tühista valik, et välistada tulevast kasutust."
 
 msgctxt "help:party.address,party_name:"
 msgid "If filled, replace the name of the party for address formatting"
 msgstr ""
-"Si esta lleno se sustituirá el nombre del tercero para el formato de las "
-"direcciones"
 
 msgctxt "help:party.address.format,active:"
 msgid "Uncheck to exclude from future use."
-msgstr "Desmarcar para eliminar el uso del registro en el futuro."
+msgstr "Tühista valik, et välistada tulevast kasutust."
 
 msgctxt "help:party.address.format,format_:"
 msgid ""
@@ -578,311 +576,297 @@ msgid ""
 "- ${country}\n"
 "- ${country_code}"
 msgstr ""
-"Variables disponibles (también en mayúsculas):\n"
-"- ${party_name}\n"
-"- ${name}\n"
-"- ${attn}\n"
-"- ${street}\n"
-"- ${zip}\n"
-"- ${city}\n"
-"- ${subdivision}\n"
-"- ${subdivision_code}\n"
-"- ${country}\n"
-"- ${country_code}"
 
 msgctxt "help:party.category,active:"
 msgid "Uncheck to exclude from future use."
-msgstr "Desmarcar para eliminar el uso del registro en el futuro."
+msgstr "Tühista valik, et välistada tulevast kasutust."
 
 msgctxt "help:party.category,childs:"
 msgid "Add children below the category."
-msgstr "Añade hijos debajo de la categoría."
+msgstr "Lisa alamjaotus kategooria alla"
 
 msgctxt "help:party.category,name:"
 msgid "The main identifier of the category."
-msgstr "El identificador principal de la categoría."
+msgstr "Kategooria peamine tunnus"
 
 msgctxt "help:party.category,parent:"
 msgid "Add the category below the parent."
-msgstr "Añade la categoría debajo del padre."
+msgstr "Lisa kategooria ülemjaotuse alla"
 
 msgctxt "help:party.configuration,party_lang:"
 msgid "The default language for new parties."
-msgstr "El idioma por defecto de los nuevos terceros."
+msgstr "Uute osapoolte vaikimisi keel"
 
 msgctxt "help:party.configuration,party_sequence:"
 msgid "Used to generate the party code."
-msgstr "Utilizado para generar el código del tercero"
+msgstr "Kasutatakse osapoole koodi loomiseks"
 
 msgctxt "help:party.configuration.party_lang,party_lang:"
 msgid "The default language for new parties."
-msgstr "El idioma por defecto de los nuevos terceros."
+msgstr "Vaikimisi keel uutele osapooltele."
 
 msgctxt "help:party.configuration.party_sequence,party_sequence:"
 msgid "Used to generate the party code."
-msgstr "Utilizada para generar el código del tercero."
+msgstr "Kasutatakse osapoole koodi loomiseks"
 
 msgctxt "help:party.contact_mechanism,active:"
 msgid "Uncheck to exclude from future use."
-msgstr "Desmarcar para eliminar el uso del registro en el futuro."
+msgstr "Tühista valik, et välistada tulevast kasutust."
 
 msgctxt "help:party.erase.ask,party:"
 msgid "The party to be erased."
-msgstr "El tercero que será eliminado."
+msgstr "Kustutatav osapool."
 
 msgctxt "help:party.identifier,party:"
 msgid "The party identified by this record."
-msgstr "El tercero identificado por este registro."
+msgstr "Kirje poolt identifitseeritud osapool"
 
 msgctxt "help:party.party,active:"
 msgid "Uncheck to exclude from future use."
-msgstr "Desmarcar para eliminar el uso del registro en el futuro."
+msgstr "Tühista valik, et välistada tulevast kasutust."
 
 msgctxt "help:party.party,categories:"
 msgid "The categories the party belongs to."
-msgstr "Las categorías a las que pertenece el tercero."
+msgstr "Kategooriad kuhu osapool kuulub"
 
 msgctxt "help:party.party,code:"
 msgid "The unique identifier of the party."
-msgstr "El identificador único del tercero."
+msgstr "Osapoole unikaalne tunnus"
 
 msgctxt "help:party.party,identifiers:"
 msgid "Add other identifiers of the party."
-msgstr "Añade otros identificadores del tercero."
+msgstr "Lisa osapoolele muid tunnuseid"
 
 msgctxt "help:party.party,lang:"
 msgid "Used to translate communications with the party."
-msgstr "Utilizado para traducir las comunicaciones con el tercero."
+msgstr "Kasutatakse osapoolega suhtluse tõlkimisel"
 
 msgctxt "help:party.party,name:"
 msgid "The main identifier of the party."
-msgstr "El identificador principal del tercero"
+msgstr "Osapoole peamine tunnus"
 
 msgctxt "help:party.party,replaced_by:"
 msgid "The party replacing this one."
-msgstr "El tercero que sustituye este."
+msgstr "Osapoolt asendav osapool"
 
 msgctxt "help:party.party,tax_identifier:"
 msgid "The identifier used for tax report."
-msgstr "El identificador utilizado con las autoridades impositivas."
+msgstr "Maksuaruandes kasutatav tunnus"
 
 msgctxt "help:party.replace.ask,destination:"
 msgid "The party that replaces."
-msgstr "El tercero que sustituye."
+msgstr "Osapool, kes asendab"
 
 msgctxt "help:party.replace.ask,source:"
 msgid "The party to be replaced."
-msgstr "El tercero que se sustituye."
+msgstr "Osapool, keda asendatakse"
 
 msgctxt "model:ir.action,name:act_address_form"
 msgid "Addresses"
-msgstr "Direcciones"
+msgstr "Aadressid"
 
 msgctxt "model:ir.action,name:act_address_format_form"
 msgid "Address Formats"
-msgstr "Formatos de las direcciones"
+msgstr "Aadressi formaat"
 
 msgctxt "model:ir.action,name:act_category_list"
 msgid "Categories"
-msgstr "Categorías"
+msgstr "Kategooriad"
 
 msgctxt "model:ir.action,name:act_category_tree"
 msgid "Categories"
-msgstr "Árbol de categorías"
+msgstr "Kategooriad"
 
 msgctxt "model:ir.action,name:act_contact_mechanism_form"
 msgid "Contact Mechanisms"
-msgstr "Métodos de contacto"
+msgstr "Kontakteerumisviis"
 
 msgctxt "model:ir.action,name:act_party_by_category"
 msgid "Parties by Category"
-msgstr "Terceros por categoría"
+msgstr "Kategooriatepõhised osapooled"
 
 msgctxt "model:ir.action,name:act_party_configuration_form"
 msgid "Party Configuration"
-msgstr "Configuración de terceros"
+msgstr "Osapoole seaded"
 
 msgctxt "model:ir.action,name:act_party_form"
 msgid "Parties"
-msgstr "Terceros"
+msgstr "Osapooled"
 
 msgctxt "model:ir.action,name:report_label"
 msgid "Labels"
-msgstr "Etiqueta"
+msgstr "Etiketid"
 
 msgctxt "model:ir.action,name:wizard_check_vies"
 msgid "Check VIES"
-msgstr "Comprobar VIES"
+msgstr "Kontrolli VIES"
 
 msgctxt "model:ir.action,name:wizard_erase"
 msgid "Erase"
-msgstr "Borrar"
+msgstr "Kustuta"
 
 msgctxt "model:ir.action,name:wizard_replace"
 msgid "Replace"
-msgstr "Reemplazar"
+msgstr "Asenda"
 
 msgctxt "model:ir.message,text:msg_address_change_party"
 msgid "You cannot change the party of address \"%(address)s\"."
-msgstr "No puede cambiar el tercero de la dirección \"%(address)s\"."
+msgstr ""
 
 msgctxt "model:ir.message,text:msg_category_name_unique"
 msgid "The name of party category must be unique by parent."
-msgstr "El nombre de la categoría del tercero debe ser único según el padre."
+msgstr ""
 
 msgctxt "model:ir.message,text:msg_contact_mechanism_change_party"
 msgid "You cannot change the party of contact mechanism \"%(contact)s\"."
-msgstr "No puede cambiar el medio de contacto \"%(contact)s\" del tercero."
+msgstr ""
 
 msgctxt "model:ir.message,text:msg_different_name"
 msgid "Parties have different names: \"%(source_name)s\" vs \"%(destination_name)s\"."
 msgstr ""
-"Los terceros tienen nombre distinto: \"%(source_name)s\" vs "
-"\"%(destination_name)s\"."
 
 msgctxt "model:ir.message,text:msg_different_tax_identifier"
 msgid ""
 "Parties have different tax identifiers: \"%(source_code)s\" vs "
 "\"%(destination_code)s\"."
 msgstr ""
-"Los terceros tienen distinto Identificador fiscal: \"%(source_code)s\" vs "
-"\"%(destination_code)s\"."
 
 msgctxt "model:ir.message,text:msg_erase_active_party"
 msgid "Party \"%(party)s\" cannot be erased because they are still active."
-msgstr "No se puede eliminar el tercero \"%(party)s\" porqué aún esta activo."
+msgstr ""
 
 msgctxt "model:ir.message,text:msg_invalid_code"
 msgid "The %(type)s \"%(code)s\" for party \"%(party)s\" is not valid."
-msgstr "El %(type)s \"%(code)s\" para el tercero \"%(party)s\" no es válido."
+msgstr ""
 
 msgctxt "model:ir.message,text:msg_invalid_format"
 msgid "Invalid format \"%(format)s\" with exception \"%(exception)s\"."
-msgstr "El format \"%(format)s\" es invalido con la excepción \"%(exception)s\"."
+msgstr ""
 
 msgctxt "model:ir.message,text:msg_invalid_phone_number"
 msgid "The phone number \"%(phone)s\" for party \"%(party)s\" is not valid."
-msgstr "El número de teléfono \"%(phone)s\" del tercero \"%(party)s\" no es válido. "
+msgstr ""
 
 msgctxt "model:ir.message,text:msg_party_code_unique"
 msgid "The code on party must be unique."
-msgstr "El código del tercero debe ser único."
+msgstr "Osapoole kood peab olema unikaalne."
 
 msgctxt "model:ir.message,text:msg_vies_unavailable"
 msgid "The VIES service is unavailable, try again later."
-msgstr "El servicio VIES no está disponible, inténtelo de nuevo más tarde."
+msgstr ""
 
 msgctxt "model:ir.sequence,name:sequence_party"
 msgid "Party"
-msgstr "Tercero"
+msgstr "Osapool"
 
 msgctxt "model:ir.sequence.type,name:sequence_type_party"
 msgid "Party"
-msgstr "Tercero"
+msgstr "Osapool"
 
 msgctxt "model:ir.ui.menu,name:menu_address_form"
 msgid "Addresses"
-msgstr "Direcciones"
+msgstr "Aadressid"
 
 msgctxt "model:ir.ui.menu,name:menu_address_format_form"
 msgid "Address Formats"
-msgstr "Formatos de las direcciones"
+msgstr "Aadressi formaat"
 
 msgctxt "model:ir.ui.menu,name:menu_category_list"
 msgid "Categories"
-msgstr "Categorías"
+msgstr "Kategooriad"
 
 msgctxt "model:ir.ui.menu,name:menu_category_tree"
 msgid "Categories"
-msgstr "Árbol de categorías"
+msgstr "Kategooriad"
 
 msgctxt "model:ir.ui.menu,name:menu_configuration"
 msgid "Configuration"
-msgstr "Configuración"
+msgstr "Seadistus"
 
 msgctxt "model:ir.ui.menu,name:menu_contact_mechanism_form"
 msgid "Contact Mechanisms"
-msgstr "Métodos de contacto"
+msgstr "Kontakteerumisviis"
 
 msgctxt "model:ir.ui.menu,name:menu_party"
 msgid "Party"
-msgstr "Terceros"
+msgstr "Osapool"
 
 msgctxt "model:ir.ui.menu,name:menu_party_configuration"
 msgid "Party Configuration"
-msgstr "Configuración de terceros"
+msgstr "Osapoole konfiguratsioon"
 
 msgctxt "model:ir.ui.menu,name:menu_party_form"
 msgid "Parties"
-msgstr "Terceros"
+msgstr "Osapooled"
 
 msgctxt "model:party.address,name:"
 msgid "Address"
-msgstr "Dirección"
+msgstr "Aadressid"
 
 msgctxt "model:party.address.format,name:"
 msgid "Address Format"
-msgstr "Formato de la dirección"
+msgstr "Aadressi formaat"
 
 msgctxt "model:party.category,name:"
 msgid "Category"
-msgstr "Categoría"
+msgstr "Kategooria"
 
+#, fuzzy
 msgctxt "model:party.check_vies.result,name:"
 msgid "Check VIES"
-msgstr "Comprobar VIES"
+msgstr "Kontrolli VIES"
 
 msgctxt "model:party.configuration,name:"
 msgid "Party Configuration"
-msgstr "Configuración de terceros"
+msgstr "Osapoole seadistus"
 
 msgctxt "model:party.configuration.party_lang,name:"
 msgid "Party Configuration Lang"
-msgstr "Configuración del idioma del tercero"
+msgstr "Osapoole seadistuse keel"
 
 msgctxt "model:party.configuration.party_sequence,name:"
 msgid "Party Configuration Sequence"
-msgstr "Configuración de las secuencias de terceros"
+msgstr "Osapoole seadistuse järjestus"
 
 msgctxt "model:party.contact_mechanism,name:"
 msgid "Contact Mechanism"
-msgstr "Método de contacto"
+msgstr "Kontakteerumisviis"
 
 msgctxt "model:party.erase.ask,name:"
 msgid "Erase Party"
-msgstr "Eliminar tercero"
+msgstr "Kustuta osapool"
 
 msgctxt "model:party.identifier,name:"
 msgid "Party Identifier"
-msgstr "Identificador del tercero"
+msgstr "Osapoole tunnus"
 
 msgctxt "model:party.party,name:"
 msgid "Party"
-msgstr "Tercero"
+msgstr "Osapool"
 
 msgctxt "model:party.party-party.category,name:"
 msgid "Party - Category"
-msgstr "Terceros - Categoría"
+msgstr "Osapool - Kategooria"
 
 msgctxt "model:party.party.lang,name:"
 msgid "Party Lang"
-msgstr "Idioma del tercero"
+msgstr ""
 
 msgctxt "model:party.replace.ask,name:"
 msgid "Replace Party"
-msgstr "Reemplazar tercero"
+msgstr "Asenda osapool"
 
 msgctxt "model:res.group,name:group_party_admin"
 msgid "Party Administration"
-msgstr "Administración de terceros"
+msgstr "Osapoole administreerimine"
 
 msgctxt "selection:party.contact_mechanism,type:"
 msgid "E-Mail"
-msgstr "Correo electrónico"
+msgstr "E-Kiri"
 
 msgctxt "selection:party.contact_mechanism,type:"
 msgid "Fax"
-msgstr "Fax"
+msgstr "Faks"
 
 msgctxt "selection:party.contact_mechanism,type:"
 msgid "IRC"
@@ -890,19 +874,19 @@ msgstr "IRC"
 
 msgctxt "selection:party.contact_mechanism,type:"
 msgid "Jabber"
-msgstr "Jabber"
+msgstr ""
 
 msgctxt "selection:party.contact_mechanism,type:"
 msgid "Mobile"
-msgstr "Móvil"
+msgstr "Mobiil"
 
 msgctxt "selection:party.contact_mechanism,type:"
 msgid "Other"
-msgstr "Otro"
+msgstr "Muu"
 
 msgctxt "selection:party.contact_mechanism,type:"
 msgid "Phone"
-msgstr "Teléfono"
+msgstr "Telefon"
 
 msgctxt "selection:party.contact_mechanism,type:"
 msgid "SIP"
@@ -914,497 +898,441 @@ msgstr "Skype"
 
 msgctxt "selection:party.contact_mechanism,type:"
 msgid "Website"
-msgstr "Sitio Web"
+msgstr "Koduleht"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Albanian VAT Number"
-msgstr "Identificador fiscal Albanes"
+msgstr "Albaania KMKR"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Argentinian Tax Number"
-msgstr "Identificador fiscal Argentino"
+msgstr "Argentiina KMKR"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Australian Business Number"
-msgstr "Número negocio Australiano"
+msgstr "Austraalia äri number"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Australian Company Number"
-msgstr "Número de empresa Australiano"
+msgstr "Austraalia ettevõtte number"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Australian Tax File Number"
-msgstr "Identificador fiscal Australiano"
+msgstr "Austraalia KMKR"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Austrian Company Register"
-msgstr "Registro de la empresa Austríaco"
+msgstr "Austria äriregister"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Austrian Tax Identification"
-msgstr "Identificador fiscal Austríaco"
+msgstr "Austria KMKR"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Belgian Enterprise Number"
-msgstr "Número de empresa Belga"
+msgstr "Belgia ettevõtte number"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Brazillian Company Identifier"
-msgstr "Identificador de empresa Brasileño"
+msgstr "Brasiilia ettevõtte number"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Brazillian National Identifier"
-msgstr "Identificador nacional Brasileño"
+msgstr "Brasiilia riiklik tunnus"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Bulgarian Number of a Foreigner"
-msgstr "Número de extranjero Búlgaro"
+msgstr "Bulgaaria välismaalase number"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Bulgarian Personal Identity Codes"
-msgstr "Código personal de identidad Búlgaro"
+msgstr "Bulgaaria isikukood"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Bulgarian VAT Number"
-msgstr "Identificador fiscal Búlgaro"
+msgstr "Bulgaaria KMKR"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Canadian Business Number"
-msgstr "Número de empresa Canadiense"
+msgstr "Kanada ettevõtte number"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Canadian Social Insurance Number"
-msgstr "Número de seguridad social Canadiense"
+msgstr "Kanada sotsaalkindlustuse number"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Chilean National Tax Number"
-msgstr "Identificador fiscal Chileno"
+msgstr "Tšiili KMKR"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Chinese Resident Identity Card Number"
-msgstr "Número de carnet de identidad de residente chino"
+msgstr "Hiina residendi tunnuskaardi number"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Colombian Business Tax Number"
-msgstr "Identificador fiscal Colombiano"
+msgstr "Kolumbia KMKR"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Colombian Identity Code"
-msgstr "Código de identidad Colombiano"
+msgstr "Kolumbia isikukood"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Croatian Identification Number"
-msgstr "Número de identificación Croata"
+msgstr "Horvaatia tunnusnumber"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Cypriot VAT Number"
-msgstr "Identificador fiscal Chipriota"
+msgstr "Küprose KMKR"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Czech National Identifier"
-msgstr "Identificador nacional Checo"
+msgstr "Tšehhi riiklik tunnus"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Czech VAT Number"
-msgstr "Identificador fiscal Checo"
+msgstr "Tšehhi KMKR"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Danish Citizen Number"
-msgstr "Número de ciudadano Danés"
+msgstr "Taani kodaniku number"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Danish VAT Number"
-msgstr "Identificador fiscal Danés"
+msgstr "Taani KMKR"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Dominican Republic National Identification Number"
-msgstr "Número de identificación nacional de la República Dominicana"
+msgstr "Dominikaani Vabariigi rahvuslik tunnusnumber"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Dominican Republic Tax"
-msgstr "Identificador fiscal de la República Dominicana"
+msgstr "Dominikaani KMKR"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Dutch Citizen Identification Number"
-msgstr "Identificador de ciudadano Holandés"
+msgstr "Hollandi kodaniku tunnusnumber"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Dutch School Identification Number"
-msgstr "Identificador escolar Holandés"
+msgstr "Hollandi kooli tunnusnumber"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Dutch VAT Number"
-msgstr "Identificador fiscal Holandés"
+msgstr "Hollandi KMKR"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Dutch student identification number"
-msgstr "Identificador de estudiante Holandés"
+msgstr "Hollandi õpilase tunnusnumber"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Ecuadorian Personal Identity Code"
-msgstr "Identificador personal Ecuatoriano"
+msgstr "Ekuadori isikukood"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Ecuadorian Tax Identification"
-msgstr "Identificador fiscal Ecuatoriano"
+msgstr "Ecuadori KMKR"
 
 msgctxt "selection:party.identifier,type:"
 msgid "English Unique Pupil Number"
-msgstr "Número único de alumno inglés"
+msgstr "Inglise unikaalne isikunumber"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Estonian Organisation Registration Code"
-msgstr "Código de registro de organizaciones Estonio"
+msgstr "Eesti ettevõtte registrikood"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Estonian Personcal ID number"
-msgstr "Identificador personal Estonio"
+msgstr "Eesti isikukood"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Estonian VAT Number"
-msgstr "Identificador fiscal Estonio"
+msgstr "Eesti KMKR"
 
 msgctxt "selection:party.identifier,type:"
 msgid "European VAT Number"
-msgstr "Identificador fiscal Europeo"
+msgstr "Euroopa KMKR"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Finnish Association Identifier"
-msgstr "Identificador de asociaciones Finlandés"
+msgstr "Soome ühingu tunnu"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Finnish Business Identifier"
-msgstr "Identificador de empresas Fnlandés"
+msgstr "Soome ettevõtte tunnus"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Finnish Personal Identity Code"
-msgstr "Código de identidad personal Finlandés"
+msgstr "Soome isikukood"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Finnish VAT Number"
-msgstr "Identificador fiscal Finlandés"
+msgstr "Soome KMKR"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Finnish individual tax number"
-msgstr "Número fiscal individual finlandés"
+msgstr "Soome individuaalne maksunumber"
 
 msgctxt "selection:party.identifier,type:"
 msgid "French Personal Identification Number"
-msgstr "Identificador personal francés"
+msgstr "Prantsuse isikuline tunnusnumber"
 
 msgctxt "selection:party.identifier,type:"
 msgid "French Tax Identification Number"
-msgstr "Número identificador fiscal Francés"
+msgstr "Prantsuse KMKR"
 
 msgctxt "selection:party.identifier,type:"
 msgid "French VAT Number"
-msgstr "Identificador fiscal Francés"
+msgstr "Prantsuse KMKR"
 
 msgctxt "selection:party.identifier,type:"
 msgid "German Company Register Number"
-msgstr "Número de registro de empresa Alemán"
+msgstr "Saksamaa ettevõtte registreerimise number"
 
 msgctxt "selection:party.identifier,type:"
 msgid "German Personal Tax Number"
-msgstr "Número fiscal personal Alemán"
+msgstr "Saksamaa isikuline maksunumber"
 
 msgctxt "selection:party.identifier,type:"
 msgid "German Tax Number"
-msgstr "Número fiscal Alemán"
+msgstr "Saksamaa maksu number"
 
 msgctxt "selection:party.identifier,type:"
 msgid "German VAT Number"
-msgstr "Identificador fiscal Alemán"
+msgstr "Saksamaa KMKR"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Greek VAT Number"
-msgstr "Identificador fiscal Griego"
+msgstr "Kreeka KM number"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Hungarian VAT Number"
-msgstr "Identificador fiscal Húngaro"
+msgstr "Ungari KM number"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Icelandic Personal and Organisation Identity Code"
-msgstr "Código de identidad personal y de organización de Islandia"
+msgstr "Islandi isikuline ja organisatsiooniline tunnuskood"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Icelandic VAT Number"
-msgstr "Identificador fiscal Islandés"
+msgstr "Islandi KM number"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Indian Digital Resident Personal Identity Number"
-msgstr "Número de identificación digital personal de residente indio"
+msgstr "India digitaalse residendi isikuline tunnusnumber"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Indian Income Tax Identifier"
-msgstr "Identificador fiscal Indio"
+msgstr "India tulumaksu tunnus"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Irish Personal Number"
-msgstr "Número personal Irlandés"
+msgstr "Iiri isikukood"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Irish VAT Number"
-msgstr "Identificador fiscal Irlandés"
+msgstr "Iiri KM number"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Italian Tax Code for Individuals"
-msgstr "Código fiscal para individuos Italiano"
+msgstr "Itaalia maksukood eraisikutele"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Italian VAT Number"
-msgstr "Identificador fiscal Italiano"
+msgstr "Itaalia KMKR"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Latvian VAT Number"
-msgstr "Identificador fiscal Letón"
+msgstr "Läti KMKR"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Lithuanian VAT Number"
-msgstr "Identificador fiscal Lituano"
+msgstr "Leedu KMKR"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Luxembourgian VAT Number"
-msgstr "Identificador fiscal Luxemburgués"
+msgstr "Luksemburgi Km number"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Malaysian National Registration Identity Card Number"
-msgstr "Número de carnet de identidad del registro nacional de Malasia"
+msgstr "Malaisia riiklik isikukoodi numbri registratuur"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Maltese VAT Number"
-msgstr "Identificador fiscal Maltés"
+msgstr "Malta KM number"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Mauritian National Identifier"
-msgstr "Identificador nacional Mauritano"
+msgstr "Mauriitiuse rahvuslik tunnus"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Mexican Tax Number"
-msgstr "Identificador fiscal Mejicano"
+msgstr "Mehhiko KM number"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Monacan VAT Number"
-msgstr "Identificador fiscal de Mónaco"
+msgstr "Monaco Km number"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Norwegian Organisation Number"
-msgstr "Número de organización Noruego"
+msgstr "Norra RegNr."
 
 msgctxt "selection:party.identifier,type:"
 msgid "Norwegian VAT Number"
-msgstr "Identificador fiscal Noruego"
+msgstr "Norra KM number"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Polish National Identification Number"
-msgstr "Identificador nacional Polaco"
+msgstr "Poola riiklik tunnusnumber"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Polish Register of Economic Units"
-msgstr "Registro polaco de unidades económicas"
+msgstr "Poola ettevõtteüksuste register"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Polish VAT Number"
-msgstr "Identificador fiscal Polaco"
+msgstr "Poola KM number"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Portuguese VAT Number"
-msgstr "Identificador fiscal Portugués"
+msgstr "Portugali KM number"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Romanian Numerical Personal Code"
-msgstr "Código personal numérico Rumano"
+msgstr "Rumeenia isikuline numbrikood"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Romanian VAT Number"
-msgstr "Identificador fiscal Rumano"
+msgstr "Rumeenia KMKR"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Russian Tax identifier"
-msgstr "Identificador fiscal Ruso"
+msgstr "Vene KMKR"
 
 msgctxt "selection:party.identifier,type:"
 msgid "SEPA Identifier of the Creditor (AT-02)"
-msgstr "Identificador de acreedor SEPA (AT-02)"
+msgstr "Kreeditori SEPA (AT-02)"
 
 msgctxt "selection:party.identifier,type:"
 msgid "San Marino National Tax Number"
-msgstr "Identificador fiscal nacional de San Marino"
+msgstr "San-Marino riiklik maksu number"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Serbian Tax Identification"
-msgstr "Identificador fiscal Serbio"
+msgstr "Serbia KMKR"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Slovak Birth Number"
-msgstr "Número de nacimiento eslovaco"
+msgstr "Slovakkia sünni number"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Slovak VAT Number"
-msgstr "Identificador fiscal Eslovaco"
+msgstr "Slovakkia KM number"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Slovenian VAT Number"
-msgstr "Identificador fiscal Esloveno"
+msgstr "Sloveenia KMKR"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Spanish Company Tax"
-msgstr "Número de empresa Espanyol (CIF)"
+msgstr "Hispaania KMKR"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Spanish Foreigner Number"
-msgstr "Número de extranjero Español (NIE)"
+msgstr "Hispaania võõramaalase number"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Spanish Personal Identity Codes"
-msgstr "Código personal de identidad Español (DNI)"
+msgstr "Hispaania isikukoodid"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Spanish VAT Number"
-msgstr "Identificador fiscal Español"
+msgstr "Hispaania KM number"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Swedish Company Number"
-msgstr "Número de empresa Sueco"
+msgstr "Rootsi RegNr."
 
 msgctxt "selection:party.identifier,type:"
 msgid "Swedish VAT Number"
-msgstr "Identificador fiscal Sueco"
+msgstr "Rootsi KM number"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Swiss Business Identifier"
-msgstr "Identificador de empresa Suizo"
+msgstr "Šveitsi ettevõtte tunnus"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Swiss Social Security Number"
-msgstr "Número de seguridad social Suizo"
+msgstr "Šveitsi sotsiaalkindlustuse number"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Swiss VAT Number"
-msgstr "Identificador fiscal Suizo"
+msgstr "Šveitsi KM number"
 
 msgctxt "selection:party.identifier,type:"
 msgid "Turkish Personal Identification Number"
-msgstr "Número de identificación personal Turco"
+msgstr "Tügi isikuline tunnusnumber"
 
+#, fuzzy
 msgctxt "selection:party.identifier,type:"
 msgid "U.S. Adoption Taxpayer Identification Number"
-msgstr "Identificador de contribuyente en adopción de los EUA"
+msgstr "U.S. isikuline maksumaksja tunnusnumber"
 
 msgctxt "selection:party.identifier,type:"
 msgid "U.S. Employer Identification Number"
-msgstr "Identificador de empresario de los EUA"
+msgstr "U.S. tööandja tunnusnumber"
 
 msgctxt "selection:party.identifier,type:"
 msgid "U.S. Individual Taxpayer Identification Number"
-msgstr "Identificador de contribuyente individual de los EUA"
+msgstr "U.S. isikuline maksumaksja tunnusnumber"
 
 msgctxt "selection:party.identifier,type:"
 msgid "U.S. Preparer Tax Identification Number"
-msgstr "Identificador fiscal de gestores de los EUA"
+msgstr "U.S. ettevalmistaja maksu tunnusnumber"
 
 msgctxt "selection:party.identifier,type:"
 msgid "U.S. Social Security Number"
-msgstr "Número de la seguridad social de los EUA"
+msgstr "U.S. sotsiaalkindlustuse numebr"
 
 msgctxt "selection:party.identifier,type:"
 msgid "U.S. Taxpayer Identification Number"
-msgstr "Identificador de contribuyente de los EUA"
+msgstr "U.S. maksumaksja tunnusnumber"
 
 msgctxt "selection:party.identifier,type:"
 msgid "United Kingdom (and Isle of Man) VAT Number"
-msgstr "Identificador fiscal del Reino Unido"
+msgstr "Ühendkuningriigi (ja Mani saare) KMKR"
 
 msgctxt "selection:party.identifier,type:"
 msgid "United Kingdom National Health Service Patient Identifier"
-msgstr ""
-"Identificador del paciente del servicio nacional de salud del Reino Unido"
+msgstr "Ühendkuningriigi rahvuslik tervise teenuste patsiendi tunnus"
 
 msgctxt "view:party.party:"
 msgid "General"
-msgstr "General"
+msgstr "Üldine"
 
 msgctxt "view:party.replace.ask:"
 msgid "Party"
-msgstr "Tercero"
+msgstr "Osapool"
 
 msgctxt "view:party.replace.ask:"
 msgid "Replace By"
-msgstr "Reemplazar por"
+msgstr "Asendatud"
 
 msgctxt "wizard_button:party.check_vies,result,end:"
 msgid "OK"
-msgstr "Aceptar"
+msgstr "OK"
 
 msgctxt "wizard_button:party.erase,ask,end:"
 msgid "Cancel"
-msgstr "Cancelar"
+msgstr "Tühista"
 
 msgctxt "wizard_button:party.erase,ask,erase:"
 msgid "Erase"
-msgstr "Eliminar"
+msgstr "Kustuta"
 
 msgctxt "wizard_button:party.replace,ask,end:"
 msgid "Cancel"
-msgstr "Cancelar"
+msgstr "Tühista"
 
 msgctxt "wizard_button:party.replace,ask,replace:"
 msgid "Replace"
-msgstr "Reemplazar"
-
-msgctxt "help:party.address,active:"
-msgid "Uncheck to exclude the address from future use."
-msgstr "Desmarcar para eliminar el uso del registro en el futuro."
-
-msgctxt "help:party.address.format,active:"
-msgid "Uncheck to exclude the format from future use."
-msgstr "Desmarcar para eliminar el uso del registro en el futuro."
-
-msgctxt "help:party.category,active:"
-msgid "Uncheck to exclude the category from future use."
-msgstr "Desmarcar para eliminar el uso del registro en el futuro."
-
-msgctxt "help:party.contact_mechanism,active:"
-msgid "Uncheck to exclude the contact mechanism from future use."
-msgstr "Desmarcar para eliminar el uso del registro en el futuro."
-
-msgctxt "help:party.party,active:"
-msgid "Uncheck to exclude the party from future use."
-msgstr "Desmarcar para eliminar el uso del registro en el futuro."
-
-msgctxt "view:party.address:"
-msgid "Addresses"
-msgstr "Direcciones"
-
-msgctxt "view:party.category:"
-msgid "Categories"
-msgstr "Categorías de tercero"
-
-msgctxt "view:party.category:"
-msgid "Category"
-msgstr "Categoría"
-
-msgctxt "view:party.check_vies.result:"
-msgid "VAT Information Exchange System Results"
-msgstr "Resultado del sistema de intercambio de información CIF/NIF"
-
-msgctxt "view:party.configuration:"
-msgid "Party Configuration"
-msgstr "Configuración de terceros"
-
-msgctxt "view:party.contact_mechanism:"
-msgid "Contact Mechanism"
-msgstr "Método de contacto"
-
-msgctxt "view:party.contact_mechanism:"
-msgid "Contact Mechanisms"
-msgstr "Método de contacto"
-
-msgctxt "view:party.identifier:"
-msgid "Party Identifier"
-msgstr "Identificador del tercero"
-
-msgctxt "view:party.identifier:"
-msgid "Party Identifiers"
-msgstr "Identificadores del tercero"
+msgstr "Asenda"
