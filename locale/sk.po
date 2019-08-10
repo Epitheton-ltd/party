@@ -126,11 +126,11 @@ msgstr "Krajina"
 
 msgctxt "field:party.address.format,create_date:"
 msgid "Create Date"
-msgstr ""
+msgstr "Dátum vytvorenia"
 
 msgctxt "field:party.address.format,create_uid:"
 msgid "Create User"
-msgstr ""
+msgstr "Vytvorené používateľom"
 
 msgctxt "field:party.address.format,format_:"
 msgid "Format"
@@ -190,11 +190,11 @@ msgstr "Názov položky"
 
 msgctxt "field:party.category,write_date:"
 msgid "Write Date"
-msgstr ""
+msgstr "Dátum zmeny"
 
 msgctxt "field:party.category,write_uid:"
 msgid "Write User"
-msgstr ""
+msgstr "Zmenené používateľom"
 
 msgctxt "field:party.check_vies.result,id:"
 msgid "ID"
@@ -210,11 +210,11 @@ msgstr "Zmluvné strany uspeli"
 
 msgctxt "field:party.configuration,create_date:"
 msgid "Create Date"
-msgstr ""
+msgstr "Dátum vytvorenia"
 
 msgctxt "field:party.configuration,create_uid:"
 msgid "Create User"
-msgstr ""
+msgstr "Vytvorené používateľom"
 
 msgctxt "field:party.configuration,id:"
 msgid "ID"
@@ -226,7 +226,7 @@ msgstr "Jazyk zml. strany"
 
 msgctxt "field:party.configuration,party_sequence:"
 msgid "Party Sequence"
-msgstr ""
+msgstr "Číselník zmluvnej strany"
 
 msgctxt "field:party.configuration,rec_name:"
 msgid "Record Name"
@@ -740,7 +740,7 @@ msgstr "Contact Mechanisms"
 
 msgctxt "model:ir.action,name:act_party_by_category"
 msgid "Parties by Category"
-msgstr "Parties by Category"
+msgstr "Zmluvné strany podľa kategórie"
 
 msgctxt "model:ir.action,name:act_party_configuration_form"
 msgid "Party Configuration"
@@ -827,29 +827,25 @@ msgctxt "model:party.check_vies.result,name:"
 msgid "Check VIES"
 msgstr "Check VIES"
 
-#, fuzzy
 msgctxt "model:party.configuration,name:"
 msgid "Party Configuration"
-msgstr "Party Configuration"
+msgstr "Konfigurácia zmluvnej straný"
 
-#, fuzzy
 msgctxt "model:party.configuration.party_lang,name:"
 msgid "Party Configuration Lang"
-msgstr "Party Configuration"
+msgstr "Konfigurácia jazyka zmluvnej strany"
 
-#, fuzzy
 msgctxt "model:party.configuration.party_sequence,name:"
 msgid "Party Configuration Sequence"
-msgstr "Party Configuration"
+msgstr "Konfigurácia zmluvnej strany"
 
-#, fuzzy
 msgctxt "model:party.contact_mechanism,name:"
 msgid "Contact Mechanism"
-msgstr "Contact Mechanisms"
+msgstr "Spôsob kontaktovania"
 
 msgctxt "model:party.erase.ask,name:"
 msgid "Erase Party"
-msgstr ""
+msgstr "Vymazať zmluvnú stranu"
 
 msgctxt "model:party.identifier,name:"
 msgid "Party Identifier"
